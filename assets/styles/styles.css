@@ -1,0 +1,151 @@
+button:hover {
+	background-color: aqua;
+	height: 40px;
+	width: 20px;
+}
+
+input:focus {
+	width: 500px;
+}
+
+a:active,
+a:visited {
+	color: red;
+}
+
+.for-paragraphs p:first-child {
+	background-color: red;
+}
+
+.for-paragraphs p:last-child {
+	background-color: aquamarine;
+}
+
+.for-paragraphs p:nth-child(2) {
+	background-color: blue;
+}
+
+.for-paragraphs p:first-child::first-letter {
+	font-size: 40px;
+}
+
+.for-paragraphs p::first-line {
+	background-color: darkslategray !important;
+}
+
+.for-paragraphs p::selection {
+	background-color: yellow;
+	color: aqua;
+}
+
+ul li::marker,
+ol li::marker {
+	color: red;
+	font-size: 20px;
+}
+
+li {
+	color: blueviolet;
+}
+
+ul,
+ol {
+	display: inline-block;
+}
+
+input::placeholder {
+	color: aqua;
+	font-size: medium;
+}
+
+p {
+	margin: 100px auto;
+	position: relative;
+}
+/* 
+p::after {
+    content: 'GGGGGGGGGGGGGGG';
+} */
+
+/* p::before {
+    content: 'SSSSSSSSSSSSSSSS';
+} */
+
+p::before {
+	content: "";
+	height: 100%;
+	width: 1px;
+}
+p {
+	/* transition: all 1s; */
+}
+p::after {
+	content: "";
+	transition: all 1s;
+	position: absolute;
+	height: 1px;
+	width: 0;
+	left: 50%;
+	bottom: -10px;
+	background-color: blue;
+}
+
+p:hover::after {
+	width: 100%;
+	left: 0;
+	background-color: green;
+}
+.for-animations {
+	width: 50px;
+	height: 50px;
+	border: solid 1px black;
+	background-color: red;
+	animation: loader 3s infinite;
+}
+
+@keyframes loader {
+	0% {
+		transform: rotate(0);
+	}
+
+	30% {
+		border-radius: 20px;
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes change-position {
+	from {
+		margin-top: 0px;
+		/* width: 50px;
+		height: 50px; */
+		background-color: aquamarine;
+	}
+
+	to {
+		/* width: 500px; */
+		margin-top: 200px;
+		background-color: blueviolet;
+	}
+}
+
+@keyframes change-bg-color {
+	0% {
+		background-color: aqua;
+	}
+
+	10% {
+		background-color: blue;
+	}
+
+	20% {
+		height: 100px;
+	}
+
+	100% {
+		width: 100%;
+	}
+}
